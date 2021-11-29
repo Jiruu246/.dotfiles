@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/etc/grub.d'
+let g:netrw_dirhist_6='/home/thinh_nguyen/.local/share/applications'
+let g:netrw_dirhist_5='/home/thinh_nguyen/Downloads'
+let g:netrw_dirhist_4='/home/thinh_nguyen/.config'
+let g:netrw_dirhist_3='/home/thinh_nguyen/.vim'
+let g:netrw_dirhist_2='/home/thinh_nguyen/.config/polybar/scripts'
+let g:netrw_dirhist_1='/home/thinh_nguyen/.config/awesome'
