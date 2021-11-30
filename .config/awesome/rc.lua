@@ -361,9 +361,12 @@ globalkeys = gears.table.join(
 
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.util.spawn("rofi -show run") end,
+    awful.key({ modkey },  "r",     function () awful.util.spawn("rofi -show run") end,
               {description = "run prompt", group = "launcher"}),
-
+		
+     awful.key({ "Mod1" }, "F4",     function () awful.util.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu") end,
+              {description = "power option promt", group = "launcher"}),
+   
     --awful.key({ modkey }, "x",
     --          function ()
     --              awful.prompt.run {
