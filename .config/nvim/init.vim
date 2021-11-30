@@ -16,6 +16,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'norcalli/nvim-colorizer.lua' "hex color code
 	Plug 'andweeb/presence.nvim' "discord presence
     Plug 'arcticicestudio/nord-vim' "colorscheme
+	Plug 'vim-airline/vim-airline' "vim status bar
+	Plug 'arcticicestudio/nord-vim' "status bar theme
+	Plug 'vim-airline/vim-airline-themes' "theme for vim airline
 call plug#end()
 
 "vim plugin config
@@ -23,6 +26,9 @@ call plug#end()
 source $HOME/.config/nvim/themes/nord.vim
 colorscheme nord
 set termguicolors
+
+"Vim airline config
+source $HOME/.config/nvim/themes/airline.vim
 
 "pair bracket config
 
