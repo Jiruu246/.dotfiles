@@ -20,3 +20,4 @@ alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir
 alias cl='clear'
 alias vim='nvim'
 alias config='/usr/bin/git --git-dir=/home/thinh_nguyen/.dotfiles/ --work-tree=/home/thinh_nguyen'
+alias rstoggle='pkill -USR1 redshift'

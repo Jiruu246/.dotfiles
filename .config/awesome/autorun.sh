@@ -15,3 +15,7 @@ run ibus
 run mictray
 run nm-applet
 ~/.config/polybar/launch.sh
+
+redshift -x #reset all effect
+killall -q redshift 
+run redshift

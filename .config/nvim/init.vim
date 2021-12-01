@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline' "vim status bar
 	Plug 'arcticicestudio/nord-vim' "status bar theme
 	Plug 'vim-airline/vim-airline-themes' "theme for vim airline
+	Plug 'tpope/vim-fugitive' "Vim plugin for Git
 call plug#end()
 
 "vim plugin config
