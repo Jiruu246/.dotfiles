@@ -12,7 +12,7 @@ colorscript -r
 alias ls="lsd"
 alias ra="ranger"
 #default editor
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 #ranger exit
