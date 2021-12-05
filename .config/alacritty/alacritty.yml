@@ -127,7 +127,7 @@ font:
 #   - (Linux/BSD) monospace
 #   - (Windows) Consolas
 #family: monospace
-  regular:
+  normal:
     family: Hack Nerd Font
     style: Regular
 # The `style` can be specified to pick a specific face.

@@ -544,7 +544,9 @@ awful.rules.rules = {
           "pinentry",
           "ibus",
           "mictray",
-          "spotify"
+          "spotify",
+		  "Spotify",
+		  "pavucontrol"
         },
         class = {
           "Arandr",
@@ -559,9 +561,11 @@ awful.rules.rules = {
           "xtightvncviewer",
           "discord",
           "spotify",
+		  "Spotify",
 	      "ibus",
           "nm-connection-editor",
-          "mictray"
+          "mictray",
+		  "pavucontrol"
         },
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client

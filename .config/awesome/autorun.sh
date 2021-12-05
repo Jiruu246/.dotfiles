@@ -10,7 +10,6 @@ function run {
 ibus-daemon -drxR 
 run spotify
 run discord
-run kmix
 run ibus
 run mictray
 run nm-applet

@@ -1,14 +1,10 @@
-"vim Identation config
+"vim config
 set tabstop=4
-"enable mouse
 set mouse=a
-"vim line number and cursor line color
 set number
-"hi LineNr term=bold ctermfg=DarkBlue
 set cursorline
-"hi CursorLineNr term=bold cterm=NONE ctermfg=LightBlue ctermbg=DarkBlue
-"hi CursorLine term=NONE cterm=NONE
-"vim plugin
+
+"vim Plug
 call plug#begin('~/.vim/plugged')
 "put any plugin here following Plug author/plugin-name
 	Plug 'jiangmiao/auto-pairs' "Auto pairs for { [ (
@@ -22,9 +18,13 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-fugitive' "Vim plugin for Git
 	Plug 'preservim/nerdtree' "nerd tree
 	Plug 'ryanoasis/vim-devicons' "Vim icon
+	Plug 'neoclide/coc.nvim', {'branch': 'release'} "code completion
 call plug#end()
 
 "vim plugin config
+"Coc.vim
+source $HOME/.config/nvim/plugConf/coc.vim
+
 "Colorschemes
 source $HOME/.config/nvim/themes/nord.vim
 colorscheme nord
@@ -34,13 +34,10 @@ set termguicolors
 source $HOME/.config/nvim/themes/airline.vim
 
 "NERDTree config
-source $HOME/.config/nvim/nerdtree.vim
+source $HOME/.config/nvim/plugConf/nerdtree.vim
+
 "pair bracket config
-
-let g:rainbow#max_level = 16
-let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
-
-autocmd FileType * RainbowParentheses
+source $HOME/.config/nvim/plugConf/pairbracket.vim
 
 "discord presence
 let g:vimsence_editing_state = 'Workspace'
