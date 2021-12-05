@@ -27,7 +27,12 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/powerButton]
+
+
+;==========================================================
+;= 						Left Group 						  =
+;==========================================================
+[bar/Archlogo]
 monitor = ${env:MONITOR:HDMI-0}
 ;enable-ipc = true
 ;override-redirect = true
@@ -42,58 +47,7 @@ foreground = #88c0d0
 
 font-0 = FiraCode Nerd Font:size=15;3
 padding-left = 1
-modules-left = powermenu 
-
-
-[bar/datetime]
-monitor = ${env:MONITOR:HDMI-0}
-;override-redirect = true
-;enable-ipc = true
-width = 13%
-height = 40
-offset-x = 0.6%
-offset-y = 10px
-radius = 10
-fixed-center = true
-
-background = #8fbcbb
-foreground = #eceff4
-
-line-size = 0 
-line-color = #f00
-
-module-margin-left = 0
-module-margin-right = 0
-
-font-0 = Hack Nerd Font:size=10.8:style=Bold;4
-font-1 = FontAwesome:size=11;4
-modules-center = date
-
-[bar/middle]
-monitor = ${env:MONITOR:HDMI-0}
-;override-redirect = true
-;enable-ipc = true
-width = 14%
-height = 40
-offset-x = 43%
-offset-y = 10px
-radius = 10
-fixed-center = true
-
-background = #cc4c566a
-foreground = #88c0d0
-
-overline-size = 2
-overline-color = #f00
-
-module-margin-left = 0
-module-margin-right = 0
-
-font-0 = FontAwesome:size=10;4
-
-modules-center = ewmh 
-
-cursor-click = pointer
+modules-left = archlogo 
 
 [bar/utils]
 monitor = ${env:MONITOR:HDMI-0}
@@ -141,6 +95,34 @@ modules-left = closetray
 tray-position = center
 cursor-click = pointer
 
+
+;==========================================================
+;= 						Right Group 					  =
+;==========================================================
+[bar/datetime]
+monitor = ${env:MONITOR:HDMI-0}
+;override-redirect = true
+;enable-ipc = true
+width = 13%
+height = 40
+offset-x = 0.6%
+offset-y = 10px
+radius = 10
+fixed-center = true
+
+background = #8fbcbb
+foreground = #eceff4
+
+line-size = 0 
+line-color = #f00
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = Hack Nerd Font:size=10.8:style=Bold;4
+font-1 = FontAwesome:size=11;4
+modules-center = date
+
 [bar/spotifyStatus]
 monitor = ${env:MONITOR:HDMI-0}
 enable-ipc = true
@@ -166,57 +148,34 @@ modules-right  = spotify-prev spotify-play-pause spotify-next
 
 cursor-click = pointer
 
-[bar/testbar]
-;monitor = ${env:MONITOR:HDMI-1}
-width = 50%
-height = 27
-;offset-x = 1%
-;offset-y = 1%
-radius = 5.0
-fixed-center = false
+;==========================================================
+;= 						Middle Group 					  =
+;==========================================================
+[bar/middle]
+monitor = ${env:MONITOR:HDMI-0}
+;override-redirect = true
+;enable-ipc = true
+width = 14%
+height = 40
+offset-x = 43%
+offset-y = 10px
+radius = 10
+fixed-center = true
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = #cc4c566a
+foreground = #88c0d0
 
-line-size = 0
-line-color = #f00
+overline-size = 2
+overline-color = #f00
 
-border-size = 0 
-border-color = #00000000
-
-padding-left = 0
-padding-right = 2 
-
-module-margin-left = 1 
+module-margin-left = 0
 module-margin-right = 0
 
-font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-1 = FontAwesome:size=11;0
-font-2 = siji:pixelsize=10;1
+font-0 = FontAwesome:size=10;4
 
-modules-left = bspwm i3
-modules-center = date 
-;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = powermenu
-
-tray-position = left
-tray-padding = 0
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+modules-center = ewmh 
 
 cursor-click = pointer
-cursor-scroll = ns-resize
 
 
 [module/ewmh]
@@ -300,28 +259,6 @@ label-urgent-padding = 3
 label-empty = %icon%
 ;label-empty-foreground = #55
 label-empty-padding = 3 
-
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
@@ -454,14 +391,6 @@ label-disconnected-foreground = #bf616a
 ; Default: (none)
 ;label-packetloss = %essid%
 ;label-packetloss-foreground = #eefafafa
-
-; Only applies if <ramp-signal> is used
-ramp-signal-0 = bad
-ramp-signal-1 = kinda bad
-ramp-signal-2 = normal
-ramp-signal-3 = above normal
-ramp-signal-4 = kinda good
-ramp-signal-5 = supper good
 
 ; Only applies if <animation-packetloss> is used
 ;animation-packetloss-0 = ⚠
@@ -605,7 +534,7 @@ animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
 
-[module/powermenu]
+[module/archlogo]
 type = custom/script
 exec = echo " "
 

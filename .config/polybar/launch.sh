@@ -5,7 +5,7 @@ killall -q polybar
 # polybar-msg cmd quit
 
 # Launch Polybar, using default config location ~/.config/polybar/config
-polybar powerButton 2>&1 & 
+polybar Archlogo 	2>&1 & 
 polybar datetime 	2>&1 & 
 polybar middle 		2>&1 &
 polybar utils		2>&1 &
