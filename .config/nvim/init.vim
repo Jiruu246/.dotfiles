@@ -1,8 +1,10 @@
 "vim config
-set tabstop=4
+set tabstop=4 shiftwidth=4
 set mouse=a
 set number
 set cursorline
+set autoindent smartindent 
+set clipboard+=unnamedplus
 
 "vim Plug
 call plug#begin('~/.vim/plugged')
