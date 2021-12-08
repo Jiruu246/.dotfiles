@@ -1,6 +1,7 @@
 " COC-Extentions
 " All extentions can be found here 
-" https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+"pol https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+"runCommand :CocList extentions to manage extensions
 let g:coc_global_extensions = [
 	\'coc-prettier',
 	\'coc-json', 
@@ -9,7 +10,8 @@ let g:coc_global_extensions = [
 	\'coc-tsserver', 
 	\'coc-jedi',
 	\'coc-java',
-	\'coc-clangd'
+	\'coc-clangd',
+	\'coc-omnisharp'
 	\]
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some

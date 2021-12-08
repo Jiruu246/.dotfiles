@@ -5,16 +5,24 @@
 "=			  /___/_//_/_/\__/|___/_/_/_/_/            =
 "=                                                     =
 "=======================================================
+
 "=======================================================
 "= 					   GENERAL 	  					   =
 "=======================================================
 set tabstop=4 shiftwidth=4
 set mouse=a
-set number
 set cursorline
 set autoindent smartindent 
 set clipboard+=unnamedplus
 set formatoptions-=ro
+
+"relative line number
+set number 
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
 
 "=======================================================
 "= 					   PLUGIN 	  					   =
@@ -35,6 +43,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'ryanoasis/vim-devicons' "Vim icon
 	Plug 'neoclide/coc.nvim', {'branch': 'release'} "code completion
 	Plug 'tpope/vim-commentary' "easy commentary
+	Plug '907th/vim-auto-save' "auto save
 call plug#end()
 
 
@@ -55,7 +64,10 @@ source $HOME/.config/nvim/plugConf/nerdtree.vim
 source $HOME/.config/nvim/plugConf/pairbracket.vim
 "discord presence
 source $HOME/.config/nvim/plugConf/discordpresence.vim
-
+"prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+"code folding
+"source $HOME/.config/nvim/plugConf/anyfold.vim
 
 "=======================================================
 "= 						KEY MAP 					   =
