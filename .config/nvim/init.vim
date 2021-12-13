@@ -1,5 +1,4 @@
 "=======================================================
-"=			     ____     _ __       _                 =
 "=			    /  _/__  (_) /__  __(_)_ _             =
 "=   			_/ // _ \/ / __/ |/ / /  ' \           =
 "=			  /___/_//_/_/\__/|___/_/_/_/_/            =
@@ -9,12 +8,27 @@
 "=======================================================
 "= 					   GENERAL 	  					   =
 "=======================================================
+set nocompatible
+set nolist
+set rnu
+
+syntax on
+"for plugin to load correctly
+filetype plugin indent on
+"fix common backspace problem
+set backspace=indent,eol,start
+"speed up scrolling
+set ttyfast
+" Include matching uppercase words with lowercase search term
+set ignorecase
+" Include only uppercase words with uppercase search term
+set smartcase
+
 set tabstop=4 shiftwidth=4
 set mouse=a
 set cursorline
 set autoindent smartindent 
 set clipboard+=unnamedplus
-set formatoptions-=ro
 
 "relative line number
 set number 
@@ -37,13 +51,15 @@ call plug#begin('~/.vim/plugged')
     Plug 'arcticicestudio/nord-vim' "colorscheme
 	Plug 'vim-airline/vim-airline' "vim status bar
 	Plug 'arcticicestudio/nord-vim' "status bar theme
-	Plug 'vim-airline/vim-airline-themes' "theme for vim airline
 	Plug 'tpope/vim-fugitive' "Vim plugin for Git
 	Plug 'preservim/nerdtree' "nerd tree
 	Plug 'ryanoasis/vim-devicons' "Vim icon
 	Plug 'neoclide/coc.nvim', {'branch': 'release'} "code completion
 	Plug 'tpope/vim-commentary' "easy commentary
 	Plug '907th/vim-auto-save' "auto save
+	Plug 'xolox/vim-session' 	"session plugin
+	Plug 'xolox/vim-misc' "depency for session plugin
+	Plug 'vimwiki/vimwiki' "vimwiki
 call plug#end()
 
 
@@ -68,6 +84,10 @@ source $HOME/.config/nvim/plugConf/discordpresence.vim
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 "code folding
 "source $HOME/.config/nvim/plugConf/anyfold.vim
+"auto save
+source $HOME/.config/nvim/plugConf/autosave.vim
+"vim-session
+source $HOME/.config/nvim/plugConf/vimsession.vim
 
 "=======================================================
 "= 						KEY MAP 					   =
@@ -107,3 +127,7 @@ vnoremap <leader>d "+d
 "fix the identation visual block
 vmap < <gv
 vmap > >gv
+
+"=======================================================
+"= 					Custom script 					   =
+"=======================================================
