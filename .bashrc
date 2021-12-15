@@ -1,5 +1,13 @@
+#####################################################
+##		   ____             __				       ## 
+##	 	  / __ )____ ______/ /_  __________	       ##
+##		 / __  / __ `/ ___/ __ \/ ___/ ___/	       ##
+##	    / /_/ / /_/ (__  ) / / / /  / /__	   	   ##
+##	   /_____/\__,_/____/_/ /_/_/   \___/	       ##
+##												   ##
+#####################################################
 source /etc/profile
-
+stty -ixon # Disable ctrl-s and ctrl-q
 #neofetch
 colorscript -r
 
@@ -16,6 +24,7 @@ xset r rate 300 50
 alias ls="lsd"
 alias ra="ranger"
 alias svim="sudo nvim"
+alias spacman="sudo pacman"
 alias cl='clear'
 alias vim='nvim'
 alias config='/usr/bin/git --git-dir=/home/thinh_nguyen/.dotfiles/ --work-tree=/home/thinh_nguyen'
