@@ -128,6 +128,25 @@ vnoremap <leader>d "+d
 vmap < <gv
 vmap > >gv
 
+" Alt + J/K moves selected lines down/up in visual mode
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-down> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+vnoremap <A-up> :m '<-2<CR>gv=gv
+nnoremap <A-up> :m .-2<CR>==
+nnoremap <A-down> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+nnoremap <A-j> :m .+1<CR>==
+
+"fix the Y yank 
+nnoremap Y y$
+"create Undo breakpoint
+inoremap , ,<C-g>u
+inoremap . .<C-g>u
+inoremap ( (<C-g>u
+inoremap ) )<C-g>u
+
+
 "=======================================================
 "= 					Custom script 					   =
 "=======================================================
