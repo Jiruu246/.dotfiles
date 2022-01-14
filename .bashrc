@@ -29,5 +29,6 @@ alias cl='clear'
 alias vim='nvim'
 alias config='/usr/bin/git --git-dir=/home/thinh_nguyen/.dotfiles/ --work-tree=/home/thinh_nguyen'
 alias rstoggle='pkill -USR1 redshift'
+alias vwiki="vim vimwiki/index.wiki"
 export PATH="/home/thinh_nguyen/.splashkit:$PATH"
 export PATH="/home/thinh_nguyen/.splashkit:$PATH"
